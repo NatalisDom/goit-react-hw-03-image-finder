@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { fetchImg } from "api/api";
 
 import { Searchbar } from "./Searchbar/Searchbar";
+import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 
 
 
@@ -32,11 +33,10 @@ export class App extends Component {
   render() {
 
     return (
-
-    <div>
-      <Searchbar submit={this.searc} />
-      
-    </div>
-  );
+      <div>
+        <Searchbar submit={this.searc} />
+        <ImageGallery images={this.state.images} />
+      </div>
+    );
   }
 };
