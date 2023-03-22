@@ -1,6 +1,7 @@
 import css from 'components/ImageGalleryItem/ImageGalleryItem.module.css';
 import { Modal } from 'components/Modal/Modal';
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class ImageGalleryItem extends Component {
   state = {
@@ -41,3 +42,9 @@ export class ImageGalleryItem extends Component {
     ));
   }
 }
+
+ImageGalleryItem.propTypes = {
+  images: PropTypes.string.isRequired,
+  showModal: PropTypes.bool.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+};
