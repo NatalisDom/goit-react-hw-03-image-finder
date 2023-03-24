@@ -44,7 +44,7 @@ export class ImageGalleryItem extends Component {
 }
 
 ImageGalleryItem.propTypes = {
-  images: PropTypes.string.isRequired,
+  images: PropTypes.array.isRequired,
   showModal: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
 };

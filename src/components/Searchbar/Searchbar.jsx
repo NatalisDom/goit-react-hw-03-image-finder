@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { ImSearch } from 'react-icons/im';
 import toast from 'react-hot-toast';
 import css from 'components/Searchbar/Searchbar.module.css';
+import PropTypes from 'prop-types';
 
 export class Searchbar extends Component {
   state = {
@@ -55,3 +56,9 @@ export class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propTypes = {
+  searchQuery: PropTypes.func,
+  handleChange: PropTypes.func,
+  handleSubmit: PropTypes.element,
+};

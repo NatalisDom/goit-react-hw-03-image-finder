@@ -1,5 +1,6 @@
 import { RotatingLines } from 'react-loader-spinner';
 import css from 'components/Loader/Loader.module.css';
+import PropTypes from 'prop-types';
 
 export const Loader = ({ showLoader }) => {
   return (
@@ -13,4 +14,8 @@ export const Loader = ({ showLoader }) => {
       wrapperStyle={css.loader}
     />
   );
+};
+
+Loader.propTypes = {
+  showModal: PropTypes.func,
 };

@@ -1,4 +1,5 @@
 import css from 'components/Button/Button.module.css';
+import PropTypes from 'prop-types';
 
 export const Button = ({ nextPage, showBtn }) => {
   if (showBtn !== 0) {
@@ -8,4 +9,8 @@ export const Button = ({ nextPage, showBtn }) => {
       </button>
     );
   }
+};
+Button.propTypes = {
+  nextPage: PropTypes.func.isRequired,
+  showBtn: PropTypes.number.isRequired,
 };
